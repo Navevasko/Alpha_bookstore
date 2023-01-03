@@ -1,11 +1,11 @@
 class AppImages {
-  static String fullLogo = "assets/logo.png";
-  static String logo = "assets/small_logo.png";
-  static String splash = "assets/onBoarding.svg";
-  static String profile = "assets/profile.svg";
-  static String bookCover1 = "assets/book_cover_1.png";
-  static String bookCover2 = "assets/book_cover_2.png";
-  static String bookCover3 = "assets/book_cover_3.png";
-  static String bookCover4 = "assets/book_cover_4.png";
-  static String bookCover5 = "assets/book_cover_5.png";
+  static const fullLogo = "assets/images/logo.png";
+  static const logo = "assets/images/small_logo.png";
+  static const onBoarding = "assets/images/onBoarding.png";
+  static const profile = "assets/images/profile.png";
+  static const bookCover1 = "assets/images/book_cover_1.png";
+  static const bookCover2 = "assets/images/book_cover_2.png";
+  static const bookCover3 = "assets/images/book_cover_3.png";
+  static const bookCover4 = "assets/images/book_cover_4.png";
+  static const bookCover5 = "assets/images/book_cover_5.png";
 }
