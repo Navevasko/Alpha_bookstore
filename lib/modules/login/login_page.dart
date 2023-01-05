@@ -13,7 +13,6 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Center(
@@ -33,13 +32,13 @@ class LoginPage extends StatelessWidget {
                 TextInput(
                   keyboardType: TextInputType.text,
                   onChanged: (String text) {},
-                  icon: Icons.cancel,
+                  finalIcon: Icons.cancel,
                   hint: "Nome de usuário",
                 ),
                 TextInput(
                   keyboardType: TextInputType.visiblePassword,
                   onChanged: (String text) {},
-                  icon: Icons.remove_red_eye,
+                  finalIcon: Icons.remove_red_eye,
                   hint: "Senha",
                 ),
               ],

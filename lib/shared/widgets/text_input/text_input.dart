@@ -4,9 +4,12 @@ import '../../theme/text_styles.dart';
 
 class TextInput extends StatelessWidget {
   final String hint;
-  final IconData? icon;
-  final Color? iconColor;
-  final void Function()? iconOnPressed;
+  final IconData? finalIcon;
+  final IconData? startingIcon;
+  final Color? finalIconColor;
+  final Color? startingIconColor;
+  final void Function()? startingIconOnPressed;
+  final void Function()? finalIconOnPressed;
   final String? initialValue;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
@@ -14,9 +17,12 @@ class TextInput extends StatelessWidget {
   final TextInputType keyboardType;
   const TextInput({
     super.key,
-    this.icon,
-    this.iconColor,
-    this.iconOnPressed,
+    this.finalIcon,
+    this.startingIcon,
+    this.finalIconColor,
+    this.startingIconColor,
+    this.startingIconOnPressed,
+    this.finalIconOnPressed,
     this.initialValue,
     this.validator,
     this.controller,
@@ -38,6 +44,12 @@ class TextInput extends StatelessWidget {
             border: Border.all(color: AppColors.gray)),
         child: Row(
           children: [
+            IconButton(
+                onPressed: startingIconOnPressed,
+                icon: Icon(
+                  startingIcon,
+                  color: startingIconColor ?? AppColors.gray,
+                )),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(left: 15),
@@ -55,10 +67,10 @@ class TextInput extends StatelessWidget {
               ),
             ),
             IconButton(
-                onPressed: iconOnPressed,
+                onPressed: finalIconOnPressed,
                 icon: Icon(
-                  icon,
-                  color: iconColor ?? AppColors.gray,
+                  finalIcon,
+                  color: finalIconColor ?? AppColors.gray,
                 )),
           ],
         ),
