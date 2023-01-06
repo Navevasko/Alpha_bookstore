@@ -1,4 +1,3 @@
-import 'package:alpha_bookstore/shared/theme/app_colors.dart';
 import 'package:alpha_bookstore/shared/theme/text_styles.dart';
 import 'package:alpha_bookstore/shared/widgets/book/book.dart';
 import 'package:alpha_bookstore/shared/widgets/text_input/text_input.dart';
@@ -9,10 +8,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: SizedBox(
-        height: 10000000000000000000000,
+        height: size.height * 1.3,
         child: Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
