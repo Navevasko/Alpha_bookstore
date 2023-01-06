@@ -1,3 +1,4 @@
+import 'package:alpha_bookstore/infra/books.dart';
 import 'package:alpha_bookstore/shared/theme/text_styles.dart';
 import 'package:alpha_bookstore/shared/widgets/book/book.dart';
 import 'package:alpha_bookstore/shared/widgets/text_input/text_input.dart';
@@ -9,6 +10,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+
+    books = test();
 
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
@@ -116,7 +119,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 350,
               child: ListView(
                 scrollDirection: Axis.horizontal,
